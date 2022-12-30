@@ -80,3 +80,46 @@ Then click create in the bottom
 >Backend Application Timeout	- Select Long
 
 >Headers (under Translate URLs in) - Must select no if the external url is different from internal one 
+
+![image](https://user-images.githubusercontent.com/96930989/210073927-a9f06b2e-8664-4f7a-89a4-b39bcdadb736.png)
+
+# P4:Configuration of RDS infrastructure on the two servers we joined to the domain before
+>Detailed steps to deploy RDS role on 2 servers we prepared before https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
+
+>One server - RD gateway + RD web access
+
+>The other server - RD connector broker + RD session host + RD licensing
+
+>After that , go to Server Manager > Remote Desktop Services > Overview > Tasks > Edit Deployment Properties
+
+![image](https://user-images.githubusercontent.com/96930989/210074129-0d881064-43d7-411c-a7e9-46b9682718d8.png)
+
+
+1. RD Gateway - Server name - Fill in the external url created by AAD AP in this section
+
+2. Check the box "Use RD Gateway credentials for remote computers"
+
+3. Uncheck the box "Bypass RD Gateway server for local addresses"
+
+4. Double check that RD web access and RD gateway is configured on the same server
+
+![image](https://user-images.githubusercontent.com/96930989/210074383-b3afd92c-0126-4550-bbc9-9d2e8d47e703.png)
+
+# P5:Configuration of RDS Certificates 
+
+1. Generate certificate 1 by clicking generate new certificate (self-signed certificate using internal FQDN) for : 
+>RD gateway 
+
+>RD web access 
+
+Install certificate 1 for RD gateway (we create the cert first then store it locally)
+![image](https://user-images.githubusercontent.com/96930989/210074500-76d96dbf-1683-432b-8fc8-323703394b67.png)
+
+Install certificate 1 for RD web access (by clicking select existing certificate and navigate to the cert we just made)
+![image](https://user-images.githubusercontent.com/96930989/210074756-3df7f4d8-e5b3-4085-ae68-2ee0b77082b8.png)
+
+Add certificate 1 to RD gateway/web access server's trusted root store  ( The one with client authentication , server authentication )
+![image](https://user-images.githubusercontent.com/96930989/210074860-8a12b54a-97d0-4e4e-877b-06f0ac1cba08.png)
+![image](https://user-images.githubusercontent.com/96930989/210074893-772f7688-1cf3-4e40-9f10-cfda9e1ac347.png)
+
+
