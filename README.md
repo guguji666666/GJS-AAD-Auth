@@ -1,5 +1,23 @@
 # Publish RDS using AAD AP (Azure AD application proxy)
 
+# Requirements
+
+Azure Active Directory:
+
+>Azure AD P1/P2 License 
+
+>Global administrator role
+
+
+Active Directory:
+
+>Domain controller	* 1 (Windows server 2016+)
+
+>RD Gateway Server * 1 (Windows server 2016+)
+
+>RD session host + broker + licensing on a single server	* 1 (Windows server 2016+)
+
+
 The instructions below apply to the scenario where :
 
 >RD gateway	- Not published to public network yet ( doesn't have public IP )
@@ -8,14 +26,6 @@ The instructions below apply to the scenario where :
 
 >Internal url of RD gateway	- You don’t want it to be exposed to public network , external url is different from the internal one
 
-
-Server required in the deployment :
-
->Domain controller	* 1 (Windows server 2016+)
-
->RD Gateway Server * 1 (Windows server 2016+)
-
->RD session host + broker + licensing on a single server	* 1 (Windows server 2016+)
 
 
 1. Deploy three servers first.
