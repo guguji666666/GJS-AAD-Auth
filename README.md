@@ -16,3 +16,34 @@ Server required in the deployment :
 >RD Gateway Server * 1 (Windows server 2016+)
 
 >RD session host + broker + licensing on a single server	* 1 (Windows server 2016+)
+
+
+1. Deploy three servers first.
+
+2. Make one server domain controller first.
+
+3. Then join the other two servers to the domain. (do not deploy RDS infrastructure in the beginning )
+
+
+# P1 : Install AAD AP connector agent on RD gateway server 
+
+Navigate to Microsoft (msappproxy.net) and download the latest version of AAD AP connector
+
+![image](https://user-images.githubusercontent.com/96930989/210068026-24211a12-2ae5-437a-bbdb-216fc7768174.png)
+
+
+# P2 : Create a new connector group for the new AAD AP connector
+
+Navigate to portal.azure.com and sign in with global administrator credentials
+
+Navigate to Azure Active Directory > Application proxy
+
+Select the server where you installed the connector 
+
+Select the area which is close to you to reduce latency 
+
+![image](https://user-images.githubusercontent.com/96930989/210068036-24ae26f7-e9ce-4690-b1c7-c59c80bf986f.png)
+
+Click +Create when the settings are done
+
+
