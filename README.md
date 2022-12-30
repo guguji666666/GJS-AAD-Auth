@@ -27,7 +27,7 @@ Server required in the deployment :
 
 # P1 : Install AAD AP connector agent on RD gateway server 
 
-Navigate to Microsoft (msappproxy.net) and download the latest version of AAD AP connector
+Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscription/d3c8b69d-6bf7-42be-a529-3fe9c2e70c90/connector/download) and download the latest version of AAD AP connector
 
 ![image](https://user-images.githubusercontent.com/96930989/210068026-24211a12-2ae5-437a-bbdb-216fc7768174.png)
 
