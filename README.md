@@ -33,14 +33,14 @@ The instructions below apply to the scenario where :
 3. Then join the other two servers to the domain. (do not deploy RDS infrastructure in the beginning )
 
 
-# P1:Install AAD AP connector agent on RD gateway server 
+# P1 : Install AAD AP connector agent on RD gateway server 
 
 Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscription/d3c8b69d-6bf7-42be-a529-3fe9c2e70c90/connector/download) and download the latest version of AAD AP connector
 
 ![image](https://user-images.githubusercontent.com/96930989/210068026-24211a12-2ae5-437a-bbdb-216fc7768174.png)
 
 
-# P2:Create a new connector group for the new AAD AP connector
+# P2 : Create a new connector group for the new AAD AP connector
 
 1. Navigate to [portal.azure.com](https://portal.azure.com/#home) and sign in with global administrator credentials
 2. Navigate to Azure Active Directory > Application proxy
@@ -51,7 +51,7 @@ Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscri
 
 5. Click +Create when the settings are done
 
-# P3:Configure RD Gateway/Web access(via app registration)
+# P3 : Configure RD Gateway/Web access(via app registration)
 
 1. Navigate to [portal.azure.com](https://portal.azure.com/#home)and sign in with global administrator credentials.
 2. Navigate to Azure Active Directory > Enterprise applications , click +new application
@@ -83,7 +83,7 @@ Then click create in the bottom
 
 ![image](https://user-images.githubusercontent.com/96930989/210073927-a9f06b2e-8664-4f7a-89a4-b39bcdadb736.png)
 
-# P4:Configuration of RDS infrastructure on the two servers we joined to the domain before
+# P4 : Configuration of RDS infrastructure on the two servers we joined to the domain before
 >Detailed steps to deploy RDS role on 2 servers we prepared before https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
 
 >One server - RD gateway + RD web access
@@ -105,7 +105,7 @@ Then click create in the bottom
 
 ![image](https://user-images.githubusercontent.com/96930989/210074383-b3afd92c-0126-4550-bbc9-9d2e8d47e703.png)
 
-# P5:Configuration of RDS Certificates 
+# P5 : Configuration of RDS Certificates 
 
 1. Generate certificate 1 by clicking generate new certificate (self-signed certificate using internal FQDN) for : 
 >RD gateway 
@@ -138,7 +138,7 @@ Export the certificate 2 to RD web/gateway server in cer.file
 ![image](https://user-images.githubusercontent.com/96930989/210075199-c8578eab-abee-4627-bad8-efafe49b2699.png)
 ![image](https://user-images.githubusercontent.com/96930989/210075200-ab449332-27ef-4a3e-b6fd-6c44ecc3d49f.png)
 
-# P6:Configure SSO between RD web and RD gateway
+# P6 : Configure SSO between RD web and RD gateway
 
 On RD broker server , run powershell command :
 
