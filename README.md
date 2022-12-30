@@ -1,4 +1,4 @@
-# Publish RDS using AAD AP(Azure AD application proxy)
+# Publish RDS using AAD AP (Azure AD application proxy)
 
 The instructions below apply to the scenario where :
 
