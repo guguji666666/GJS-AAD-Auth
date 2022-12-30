@@ -147,11 +147,14 @@ Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -Cus
 Sample : 
 
 Set-RDSessionCollectionConfiguration -CollectionName "GJSTEST1" -CustomRdpProperty "pre-authentication server address:s:https://chickrdgw-ultramanorb.msappproxy.net/rdweb`nrequire pre-authentication:i:1"
+  
 ![image](https://user-images.githubusercontent.com/96930989/210075295-0eeecd14-06e3-4efe-af4f-27173cbed548.png)
 
+  
 Verify the configuration :
   
 (get-wmiobject -Namespace root\cimv2\terminalservices -Class Win32_RDCentralPublishedRemoteDesktop).RDPFileContents
+  
 ![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
 
 
