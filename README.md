@@ -122,4 +122,45 @@ Add certificate 1 to RD gateway/web access server's trusted root store  ( The on
 ![image](https://user-images.githubusercontent.com/96930989/210074860-8a12b54a-97d0-4e4e-877b-06f0ac1cba08.png)
 ![image](https://user-images.githubusercontent.com/96930989/210074893-772f7688-1cf3-4e40-9f10-cfda9e1ac347.png)
 
+2. Certificate 2 ( self-signed certificate using internal FQDN ) for: 
+>RD Connection Broker - Enable Single Sign On 
+
+>RD Connection Broker - Publishing services
+
+Cert for RD Connection Broker - Enable Single Sign On
+![image](https://user-images.githubusercontent.com/96930989/210075077-6818861c-ee39-47c3-bf89-ca03ccb2aabb.png)
+
+Cert for RD Connection Broker - Publishing services
+![image](https://user-images.githubusercontent.com/96930989/210075087-bbde8bda-c498-4150-b031-636c702cb31f.png)
+
+Export the certificate 2 to RD web/gateway server in cer.file
+![image](https://user-images.githubusercontent.com/96930989/210075185-052502f0-3f5a-4b8b-9880-637a7338c11c.png)
+![image](https://user-images.githubusercontent.com/96930989/210075199-c8578eab-abee-4627-bad8-efafe49b2699.png)
+![image](https://user-images.githubusercontent.com/96930989/210075200-ab449332-27ef-4a3e-b6fd-6c44ecc3d49f.png)
+
+# P6:Configure SSO between RD web and RD gateway
+
+On RD broker server , run powershell command :
+
+Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s:<proxyfrontendurl/rdweb>`nrequire pre-authentication:i:1"
+  
+Sample : 
+
+Set-RDSessionCollectionConfiguration -CollectionName "GJSTEST1" -CustomRdpProperty "pre-authentication server address:s:https://chickrdgw-ultramanorb.msappproxy.net/rdweb`nrequire pre-authentication:i:1"
+![image](https://user-images.githubusercontent.com/96930989/210075295-0eeecd14-06e3-4efe-af4f-27173cbed548.png)
+
+Verify the configuration :
+  
+(get-wmiobject -Namespace root\cimv2\terminalservices -Class Win32_RDCentralPublishedRemoteDesktop).RDPFileContents
+![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
+
+
+
+
+
+
+
+
+
+
 
