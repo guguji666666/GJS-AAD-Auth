@@ -53,7 +53,7 @@ Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscri
 
 # P3 : Configure RD Gateway/Web access(via app registration)
 
-1. Navigate to [portal.azure.com](https://portal.azure.com/#home)and sign in with global administrator credentials.
+1. Navigate to [portal.azure.com](https://portal.azure.com/#home) and sign in with global administrator credentials.
 2. Navigate to Azure Active Directory > Enterprise applications , click +new application
 
 ![image](https://user-images.githubusercontent.com/96930989/210073463-f534c1f8-77df-4122-b6c0-50442a57d21b.png)
@@ -69,7 +69,7 @@ Then click create in the bottom
 ![image](https://user-images.githubusercontent.com/96930989/210073512-ff316a37-aadc-40da-b6cf-b9db1c6f1dd0.png)
 
 
->Internal URL - Suggest to use the internal FQDN of RD gateway server ( normally server name )
+>Internal URL - Suggest to use the internal FQDN of RD gateway server (normally server name)
 
 >External Url - Leave it if you want to user the default external url created by AAD AP (Note this url and we will need it later)
 
