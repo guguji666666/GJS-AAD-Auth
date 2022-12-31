@@ -133,7 +133,7 @@ Cert for RD Connection Broker - Enable Single Sign On
 Cert for RD Connection Broker - Publishing services
 ![image](https://user-images.githubusercontent.com/96930989/210075087-bbde8bda-c498-4150-b031-636c702cb31f.png)
 
-Export the certificate 2 to RD web/gateway server in cer.file
+Important !!!  Export the certificate 2 to RD web/gateway server in cer.file
 ![image](https://user-images.githubusercontent.com/96930989/210075185-052502f0-3f5a-4b8b-9880-637a7338c11c.png)
 ![image](https://user-images.githubusercontent.com/96930989/210075199-c8578eab-abee-4627-bad8-efafe49b2699.png)
 ![image](https://user-images.githubusercontent.com/96930989/210075200-ab449332-27ef-4a3e-b6fd-6c44ecc3d49f.png)
@@ -157,11 +157,71 @@ Verify the configuration :
   
 ![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
 
+  
+# P7(Optional) : Install and publish RD web client on RD gateway server
+
+  Set up the Remote Desktop web client for your users
+  
+ 1. Navigate to RD gateway/web acess server
+ 2. Launch powershell as admin
+ 3. Run command : Install-Module -Name PowerShellGet -Force
+ 4. Restart powershell with admin
+ 5. Run command : Install-Module -Name RDWebClientManagement
+ 6. Run command : Install-RDWebClientPackage
+ 7. Check if the certificate of RD broker server has been copied to RD gateway server (cert 2)
+ 8. Run ps command : Import-RDWebClientBrokerCert <.cer file path>    
+
+    >Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
+  
+    Sample
+  
+    ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
+
+  
+    ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
+
+ 9. Check RDWebClientBrokerCert is configured correctly
+  
+    >Run PS command below to verify the output shows the information of cert 2:
+  
+    Get-RDWebClientBrokerCert
+  
+    ![image](https://user-images.githubusercontent.com/96930989/210121850-857cce0d-bfd2-4269-94eb-c955b520bba4.png)
+
+ 10. Publish RD web client using the command below:
+  
+     Publish-RDWebClientPackage -Type Production -Latest
+
+For more details about this part, please refer to the doc below:
+
+>https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin
+  
+>https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin#how-to-publish-the-remote-desktop-web-client
+  
+>https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-integrate-with-remote-desktop-services#direct-rds-traffic-to-application-proxy
 
 
 
 
 
+    
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+ 
+  
+  
+  
 
 
 
