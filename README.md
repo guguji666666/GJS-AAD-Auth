@@ -2,14 +2,14 @@
 
 # Requirements
 
-Azure Active Directory:
+Azure Active Directory
 
 >Azure AD P1/P2 License
 
 >Global administrator role
 
 
-Active Directory:
+Active Directory
 
 >Domain controller	* 1 (Windows server 2016+)
 
