@@ -85,7 +85,7 @@ Then click create in the bottom
 
 ![image](https://user-images.githubusercontent.com/96930989/210073927-a9f06b2e-8664-4f7a-89a4-b39bcdadb736.png)
 
-# P4 : Configuration of RDS infrastructure on the two servers we joined to the domain before
+# P4 : Configuration RDS infrastructure
 >Detailed steps to deploy RDS role on 2 servers we prepared before https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
 
 >One server - RD gateway + RD web access
@@ -140,7 +140,7 @@ Important !!!  Export the certificate 2 to RD web/gateway server in cer.file
 ![image](https://user-images.githubusercontent.com/96930989/210075199-c8578eab-abee-4627-bad8-efafe49b2699.png)
 ![image](https://user-images.githubusercontent.com/96930989/210075200-ab449332-27ef-4a3e-b6fd-6c44ecc3d49f.png)
 
-# P6 : Configure SSO between RD web and RD gateway
+# P6 : Configure SSO between RD web access and RD gateway
 
 On RD broker server , run powershell command :
 ```powershell
