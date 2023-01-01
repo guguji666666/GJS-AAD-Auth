@@ -30,4 +30,4 @@ https://help.okta.com/en-us/Content/Topics/Apps/Office365-Deployment/deploy-main
 ![image](https://user-images.githubusercontent.com/96930989/210169212-571fe63b-614d-42f6-91aa-841cb7e1bdb5.png)
 ![image](https://user-images.githubusercontent.com/96930989/210169224-d2b2fa26-6d64-40f1-8bbf-8ce9f15df05d.png)
 
-After that , click Save
+After that , click `Save`
