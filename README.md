@@ -33,7 +33,9 @@ The instructions below apply to the scenario where :
 3. Then join the other two servers to the domain. (do not deploy RDS infrastructure in the beginning )
 
 
-# P1 : Install AAD AP connector agent on the server which you want to be RD gateway
+# P1 : Install AAD AP connector agent on RD gateway
+
+Navigate to the server which you want to be RD gateway
 
 Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscription/d3c8b69d-6bf7-42be-a529-3fe9c2e70c90/connector/download) and download the latest version of AAD AP connector
 
