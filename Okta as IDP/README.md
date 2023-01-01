@@ -1,21 +1,22 @@
 # Okta doc
 https://help.okta.com/en-us/Content/Topics/Apps/Office365-Deployment/deploy-main.htm
 
-# Step 1 : Add O365 to applications in Okta portal 
+## Step 1 : Add O365 to applications in Okta portal 
 ![image](https://user-images.githubusercontent.com/96930989/210168916-9df3d5e1-e3c9-48e2-9015-2ca1b61b7d23.png)
 ![image](https://user-images.githubusercontent.com/96930989/210168959-fa55dcaa-48f0-4d13-9920-d7cf9bc4ba9c.png)
 
-# Step 2 : Set verified domain in AAD tenant to be federated with Okta
-![image](https://user-images.githubusercontent.com/96930989/210169060-95a91881-f77c-4134-ac10-96513702358b.png)
+## Step 2 : Set verified domain in AAD tenant to be federated with Okta
+![image](https://user-images.githubusercontent.com/96930989/210170841-d097a623-7c37-4518-8e38-08b9808f3b82.png)
 
-**Sample**
+Sample
+
 ![image](https://user-images.githubusercontent.com/96930989/210169086-808c8a17-e023-4689-b8df-31e2270eeca2.png)
 ![image](https://user-images.githubusercontent.com/96930989/210169105-03f1cb5a-a86d-48ad-824f-128e95e2417d.png)
 
 **After that, the domain we added becomes federated domain**
 ![image](https://user-images.githubusercontent.com/96930989/210169122-750b6e16-5910-49bc-8d50-8d7edbb65c89.png)
 
-# Step 3 : Provision users to be synchronized from Okta to Azure AD
+## Step 3 : Provision users to be synchronized from Okta to Azure AD
 **Manually create several users for test**
 ![image](https://user-images.githubusercontent.com/96930989/210169136-6df6de07-adaa-4bce-9846-e5036f2f7002.png)
 ![image](https://user-images.githubusercontent.com/96930989/210169148-ed8ddd6d-3e8e-407e-b07b-85c50940fce2.png)
