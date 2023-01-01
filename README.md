@@ -141,20 +141,24 @@ Important !!!  Export the certificate 2 to RD web/gateway server in cer.file
 # P6 : Configure SSO between RD web and RD gateway
 
 On RD broker server , run powershell command :
-
+```powershell
 Set-RDSessionCollectionConfiguration -CollectionName "<yourcollectionname>" -CustomRdpProperty "pre-authentication server address:s:<proxyfrontendurl/rdweb>`nrequire pre-authentication:i:1"
-  
-Sample : 
+```
 
+Sample : 
+```powershell
 Set-RDSessionCollectionConfiguration -CollectionName "GJSTEST1" -CustomRdpProperty "pre-authentication server address:s:https://chickrdgw-ultramanorb.msappproxy.net/rdweb`nrequire pre-authentication:i:1"
-  
+```
+
 ![image](https://user-images.githubusercontent.com/96930989/210075295-0eeecd14-06e3-4efe-af4f-27173cbed548.png)
 
   
 Verify the configuration :
-  
+
+```powershell
 (get-wmiobject -Namespace root\cimv2\terminalservices -Class Win32_RDCentralPublishedRemoteDesktop).RDPFileContents
-  
+```
+
 ![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
 
   
@@ -164,33 +168,47 @@ Verify the configuration :
   
  1. Navigate to RD gateway/web acess server
  2. Launch powershell as admin
- 3. Run command : Install-Module -Name PowerShellGet -Force
+ 3. Run command :
+ ```powershell
+ Install-Module -Name PowerShellGet -Force
+ ```
  4. Restart powershell with admin
- 5. Run command : Install-Module -Name RDWebClientManagement
- 6. Run command : Install-RDWebClientPackage
+ 5. Run command : 
+  ```powershell
+  Install-Module -Name RDWebClientManagement
+   ```
+ 6. Run command : 
+  ```powershell
+  Install-RDWebClientPackage
+   ```
  7. Check if the certificate of RD broker server has been copied to RD gateway server (cert 2)
- 8. Run ps command : Import-RDWebClientBrokerCert <.cer file path>    
+ 8. Run ps command :  
+  ```powershell
+  Import-RDWebClientBrokerCert <.cer file path> 
+  ```
 
-    >Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
+  Note:Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
   
-    Sample
+  Sample
   
-    ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
-
+  ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
   
-    ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
+  ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
+    
 
  9. Check RDWebClientBrokerCert is configured correctly
   
     >Run PS command below to verify the output shows the information of cert 2:
-  
+    ```powershell  
     Get-RDWebClientBrokerCert
+    ```
   
     ![image](https://user-images.githubusercontent.com/96930989/210121850-857cce0d-bfd2-4269-94eb-c955b520bba4.png)
 
  10. Publish RD web client using the command below:
-  
+     ```powershell  
      Publish-RDWebClientPackage -Type Production -Latest
+     ```
 
 For more details about this part, please refer to the doc below:
 
