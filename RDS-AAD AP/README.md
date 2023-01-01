@@ -166,7 +166,7 @@ Verify the configuration :
 ![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
 
   
-## P7-Optional : Install and publish RD web client(on RD gateway server)
+## P7(Optional) : Install and publish RD web client(on RD gateway server)
 
   Set up the Remote Desktop web client for your users
   
