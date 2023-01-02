@@ -166,7 +166,7 @@ Verify the configuration :
 ![image](https://user-images.githubusercontent.com/96930989/210075349-c5145ba8-548d-4386-9dc8-c8fd17ceb93c.png)
 
   
-## P7(Optional) : Install and publish RD web client(on RD gateway server)
+## P7 (Optional) : Install and publish RD web client(on RD gateway server)
 
   Set up the Remote Desktop web client for your users
   
@@ -178,41 +178,41 @@ Verify the configuration :
  ```
  4. Restart powershell with admin
  5. Run PS command : 
-  ```powershell
-  Install-Module -Name RDWebClientManagement
-   ```
+ ```powershell
+ Install-Module -Name RDWebClientManagement
+ ```
  6. Run PS command : 
-  ```powershell
-  Install-RDWebClientPackage
-   ```
+ ```powershell
+ Install-RDWebClientPackage
+ ```
  7. Check if the certificate of RD broker server has been copied to RD gateway server (cert 2)
  8. Run ps command :  
-  ```powershell
-  Import-RDWebClientBrokerCert <.cer file path> 
+ ```powershell
+ Import-RDWebClientBrokerCert <.cer file path> 
   ```
 
-  Note:Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
+ Note:Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
   
-  Sample
+ Sample
   
-  ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
+ ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
   
-  ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
+ ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
     
 
  9. Check RDWebClientBrokerCert is configured correctly
   
-    >Run PS command below to verify the output shows the information of cert 2:
-    ```powershell  
-    Get-RDWebClientBrokerCert
-    ```
+ Run PS command below to verify the output shows the information of cert 2:
+ ```powershell  
+ Get-RDWebClientBrokerCert
+ ```
   
-    ![image](https://user-images.githubusercontent.com/96930989/210121850-857cce0d-bfd2-4269-94eb-c955b520bba4.png)
+ ![image](https://user-images.githubusercontent.com/96930989/210121850-857cce0d-bfd2-4269-94eb-c955b520bba4.png)
 
  10. Publish RD web client using the command below:
-     ```powershell  
-     Publish-RDWebClientPackage -Type Production -Latest
-     ```
+ ```powershell  
+ Publish-RDWebClientPackage -Type Production -Latest
+ ```
 
 For more details about this part, please refer to the doc below:
 
