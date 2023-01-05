@@ -86,17 +86,14 @@ Navigate to [Microsoft (msappproxy.net)](https://download.msappproxy.net/subscri
 
 ![image](https://user-images.githubusercontent.com/96930989/210073927-a9f06b2e-8664-4f7a-89a4-b39bcdadb736.png)
 
-## P4 : Configuration RDS infrastructure
+## P4 : Configuration basic RDS infrastructure
 
-### Deploy RDS role on 2 servers we prepared before following the doc
+[Deploy your Remote Desktop environment](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure)
 
-   https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
+* Pick one server for `RD gateway` + `RD web access`
+* Pick the other server for `RD connector broker` + `RD session host` + `RD licensing`
 
-* One server - RD gateway + RD web access
-
-* The other server - RD connector broker + RD session host + RD licensing
-
-* After that , go to Server Manager > Remote Desktop Services > Overview > Tasks > Edit Deployment Properties
+#### After that , go to Server Manager > Remote Desktop Services > Overview > Tasks > Edit Deployment Properties
 
 ![image](https://user-images.githubusercontent.com/96930989/210074129-0d881064-43d7-411c-a7e9-46b9682718d8.png)
 
