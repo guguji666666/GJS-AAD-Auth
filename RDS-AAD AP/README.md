@@ -188,9 +188,9 @@ Verify the configuration :
  Import-RDWebClientBrokerCert <.cer file path> 
   ```
 
- Note:Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
+     Note:Run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker
   
- Sample
+  Sample
   
  ![image](https://user-images.githubusercontent.com/96930989/210121816-704aaf89-0ec9-44c7-b4d4-219e58ffc8c5.png)
   
@@ -213,7 +213,7 @@ Verify the configuration :
 
 For more details about this part, please refer to the doc below:
 
-* https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin
+](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin)
   
 * https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin#how-to-publish-the-remote-desktop-web-client
   
