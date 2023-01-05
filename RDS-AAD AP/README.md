@@ -213,7 +213,7 @@ Verify the configuration :
 
 For more details about this part, please refer to the doc below:
 
-](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin)
+[Set up RD web client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin)
   
 * https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin#how-to-publish-the-remote-desktop-web-client
   
