@@ -165,25 +165,24 @@ Verify the configuration :
   
 ## P7 (Optional) : Install and publish RD web client(on RD gateway server)
 
-  Set up the Remote Desktop web client for your users
+ Set up the Remote Desktop web client for your users
   
- 1. Navigate to RD gateway/web acess server
- 2. Launch powershell as admin
- 3. Run PS command :
+ ##### 1. Navigate to RD gateway/web acess server
+ ##### 2. Launch powershell as admin, Run PS command
  ```powershell
  Install-Module -Name PowerShellGet -Force
  ```
- 4. Restart powershell with admin
- 5. Run PS command : 
+ ##### 3. Restart powershell with admin
+ ##### 4. Run PS command : 
  ```powershell
  Install-Module -Name RDWebClientManagement
  ```
- 6. Run PS command : 
+ ##### 5. Run PS command : 
  ```powershell
  Install-RDWebClientPackage
  ```
- 7. Check if the certificate of RD broker server has been copied to RD gateway server (cert 2)
- 8. Run ps command :  
+ ##### 6. Check if the certificate of RD broker server has been copied to RD gateway server (cert 2)
+ ##### 7. Run ps command :  
  ```powershell
  Import-RDWebClientBrokerCert <.cer file path> 
   ```
@@ -197,16 +196,15 @@ Verify the configuration :
  ![image](https://user-images.githubusercontent.com/96930989/210121832-43246df1-e3b7-490d-bf6b-b1e4bb388ac0.png)
     
 
- 9. Check RDWebClientBrokerCert is configured correctly
-  
- Run PS command below to verify the output shows the information of cert 2:
+ ##### 8. Check if RDWebClientBrokerCert is configured correctly, run PS command below to verify the output shows the information of cert 2:
+ 
  ```powershell  
  Get-RDWebClientBrokerCert
  ```
   
  ![image](https://user-images.githubusercontent.com/96930989/210121850-857cce0d-bfd2-4269-94eb-c955b520bba4.png)
 
- 10. Publish RD web client using the command below:
+ ##### 9. Publish RD web client using the command below:
  ```powershell  
  Publish-RDWebClientPackage -Type Production -Latest
  ```
@@ -215,9 +213,9 @@ For more details about this part, please refer to the doc below:
 
 [Set up RD web client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin)
   
-* https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin#how-to-publish-the-remote-desktop-web-client
+[Publish RD web client](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin#how-to-publish-the-remote-desktop-web-client)
   
-* https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-integrate-with-remote-desktop-services#direct-rds-traffic-to-application-proxy
+[Direct RDS traffic to Application Proxy](https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-integrate-with-remote-desktop-services#direct-rds-traffic-to-application-proxy)
 
 
 
