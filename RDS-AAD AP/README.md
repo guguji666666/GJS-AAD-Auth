@@ -208,6 +208,7 @@ Verify the configuration :
  ```powershell  
  Publish-RDWebClientPackage -Type Production -Latest
  ```
+![image](https://user-images.githubusercontent.com/96930989/222875866-441bdb69-4350-4afd-9a3f-a253486129e5.png)
 
 For more details about this part, please refer to the doc below:
 
