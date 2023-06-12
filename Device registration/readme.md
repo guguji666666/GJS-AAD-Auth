@@ -15,3 +15,5 @@ For [`Azure AD joined`](https://learn.microsoft.com/en-us/azure/active-directory
 ### Hybrid Azure AD joined
 For [`Hybrid Azure AD joined`](https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-azure-ad-join-hybrid) devices running windows OS , you must login the device with domain accounts ( these accounts should also be synchronized to Azure AD )
 
+[Configure hybrid Azure AD join](https://learn.microsoft.com/en-us/azure/active-directory/devices/howto-hybrid-azure-ad-join) <br>
+[Hybrid Azure AD join targeted deployment](https://learn.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-control) <br>
